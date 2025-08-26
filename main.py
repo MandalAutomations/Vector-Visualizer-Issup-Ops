@@ -27,13 +27,7 @@ def plot_embeddings_3d(embeddings_3d, labels):
 if __name__ == "__main__":
     llama = llama(OLLAMA_HOST, MODEL)
     
-    texts = [
-        "nfl",
-        "football",
-        "soccer",
-        "basketball",
-        "baseball",
-    ]
+    texts = open("words.txt", "r").read().splitlines()
 
     embeddings = []
     for text in texts:

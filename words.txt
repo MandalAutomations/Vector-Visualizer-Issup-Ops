@@ -1,0 +1,8 @@
+nfl
+football
+soccer
+basketball
+baseball
+pc
+computer
+macbook
