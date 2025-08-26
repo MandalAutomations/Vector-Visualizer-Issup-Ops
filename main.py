@@ -1,12 +1,12 @@
+#!/usr/bin/env python:
 import os
-import sys
 from src.llama import llama
 import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-MODEL = "llama3.2:1b" # Find available models here https://ollama.com/library
+MODEL = "nomic-embed-text:v1.5" # Find available models here https://ollama.com/library
 
 def plot_embeddings_3d(embeddings_3d, labels):
 

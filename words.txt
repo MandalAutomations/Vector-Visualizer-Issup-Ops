@@ -6,3 +6,5 @@ baseball
 pc
 computer
 macbook
+linux
+macOS
