@@ -14,7 +14,7 @@ jobs:
         volumes:
           - ollama_data:/root/.ollama
     permissions:
-      contents: read
+      contents: write
       issues: write
     steps:
       - name: Checkout code
