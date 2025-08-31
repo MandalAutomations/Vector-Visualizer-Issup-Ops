@@ -1,0 +1,30 @@
+name: Run Vector Image Create
+
+on:
+    issue_comment:
+      types: [created]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+
+      - name: Print Issue Body to words.txt
+        run: |
+          echo "${{ github.event.comment.body }}" > words.txt
+
+      - name: Run script
+        run: |
+          python main.py
+
+      - name: Upload 3D plot
+        uses: actions/upload-artifact@v3
+        with:
+          name: 3D plot
+          path: 3d_plot_small.png

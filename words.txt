@@ -1,5 +1,5 @@
-nfl
-football
+- nfl
+-football
 soccer
 basketball
 baseball
@@ -8,3 +8,7 @@ computer
 macbook
 linux
 macOS
+elephant
+lion
+tiger
+operating system

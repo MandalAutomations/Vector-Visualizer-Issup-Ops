@@ -1,4 +1,4 @@
-#!/usr/bin/env python:
+#!/usr/bin/env python
 import os
 from src.llama import llama
 import numpy as np
@@ -31,6 +31,9 @@ if __name__ == "__main__":
 
     embeddings = []
     for text in texts:
+        text = text.replace("-", "").strip()
+        text = text.replace("- ", "").strip()
+        print(text)
         embedding = llama.create_embedding(text)
         if embedding is not None:
             embeddings.append(embedding)
