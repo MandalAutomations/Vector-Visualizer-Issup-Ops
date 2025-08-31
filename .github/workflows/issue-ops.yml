@@ -46,6 +46,7 @@ jobs:
           git config --global user.name "GitHub Action"
           git add ./img
           git commit -m "Add 3D plot for run ${{ github.run_id }}"
+          git push
       
       - name: Upload 3D plot
         uses: actions/upload-artifact@v4
