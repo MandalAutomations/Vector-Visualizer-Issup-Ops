@@ -1,9 +1,8 @@
 name: Run Vector Image Create
 
 on:
-    issue_comment:
-      types: [created]
-
+    issues:
+      types: [opened, edited]
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -17,7 +16,7 @@ jobs:
 
       - name: Print Issue Body to words.txt
         run: |
-          echo "${{ github.event.comment.body }}" > words.txt
+          echo "${{ github.event.issue.body }}" > words.txt
 
       - name: Run script
         run: |
