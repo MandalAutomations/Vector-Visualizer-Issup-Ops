@@ -44,3 +44,10 @@ jobs:
         with:
           name: 3D plot
           path: 3d_plot_small.png
+
+      - name: Comment image on issue
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ![3D Plot](https://github.com/${{ github.repository }}/raw/${{ github.ref }}/3d_plot_small.png)
