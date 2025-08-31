@@ -36,6 +36,8 @@ jobs:
       - name: Run script
         run: |
           python main.py
+        env:
+          OLLAMA_HOST: "http://localhost:11434"
 
       - name: Upload 3D plot
         uses: actions/upload-artifact@v4
