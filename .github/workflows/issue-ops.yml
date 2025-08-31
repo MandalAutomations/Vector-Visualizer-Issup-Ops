@@ -23,7 +23,7 @@ jobs:
           python main.py
 
       - name: Upload 3D plot
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 3D plot
           path: 3d_plot_small.png
