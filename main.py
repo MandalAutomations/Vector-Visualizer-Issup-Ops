@@ -30,9 +30,10 @@ if __name__ == "__main__":
     texts = open("words.txt", "r").read().splitlines()
 
     embeddings = []
-    for text in texts:
-        text = text.replace("-", "").strip()
+    for text in texts:  
         text = text.replace("- ", "").strip()
+        text = text.replace("-", "").strip()
+    
         print(text)
         embedding = llama.create_embedding(text)
         if embedding is not None:
