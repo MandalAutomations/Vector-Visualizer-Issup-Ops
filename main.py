@@ -28,11 +28,11 @@ if __name__ == "__main__":
     llama = llama(OLLAMA_HOST, MODEL)
     
     texts = open("words.txt", "r").read().splitlines()
-    text_split = [text.replace("-", "").strip() for text in texts]
+    text_split = [text.replace("-", "") for text in texts]
 
     embeddings = []
     for text in text_split:  
-        embedding = llama.create_embedding(text)
+        embedding = llama.create_embedding(text.strip())
         if embedding is not None:
             embeddings.append(embedding)
 
