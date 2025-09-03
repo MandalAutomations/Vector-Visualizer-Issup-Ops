@@ -42,4 +42,4 @@ if __name__ == "__main__":
     pca = PCA(n_components=3)
     embeddings_3d = pca.fit_transform(embeddings)
 
-    plot_embeddings_3d(embeddings_3d, texts)
+    plot_embeddings_3d(embeddings_3d, text_split)

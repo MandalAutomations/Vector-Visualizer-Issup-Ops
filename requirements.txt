@@ -1,5 +1,4 @@
 requests
-pillow
 scikit-learn
 numpy
 matplotlib
