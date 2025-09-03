@@ -60,8 +60,4 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-<<<<<<< HEAD
             ![3D Plot](https://github.com/${{ github.repository }}/raw/${{ github.ref }}/img/${{ github.run_id }}.png)
-=======
-            ![3D Plot](https://github.com/${{ github.repository }}/raw/${{ github.ref }}/img/${{ github.run_id }}.png
->>>>>>> be3cfba4687bb4ab61b81b0e6c44db65811fde3b
