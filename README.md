@@ -1,44 +1,13 @@
-# Vector Visualizer
+# Ollama Embedding Issue Ops
 
-This project visualizes word embeddings in 3D using PCA and Matplotlib. It leverages the Llama model (via Ollama) to generate embeddings for a list of words, then plots them for easy comparison.
+Automation isn't just for builds and deployments anymore, lets build something fun with it. In this project, we'll explore how to turn GitHub Issues into a creative workflow using Issue Ops. We'll leverage Ollama to generate text embeddings, visualize them as vector images, and automatically display these images in the issue itself.
 
-## Features
-
-- Generates embeddings for words using a Llama model.
-- Reduces embedding dimensions to 3D using PCA.
-- Visualizes embeddings in a 3D scatter plot with labels.
-- Saves the plot as a high-resolution PNG.
-
-## Requirements
-
-- Python 3.10+
-- Ollama server running with a supported Llama model
-- `numpy`
-- `scikit-learn`
-- `matplotlib`
-
-Install dependencies:
-```bash
-pip install -r requirements.txt
+## What we need
+To follow along, start with the Ollama Devcontainer GitHub template, which comes pre-configured with Python and Ollama.
+You'll just need to add the following Python libraries to your requirements.txt file:
 ```
-
-## Usage
-
-1. Ensure your Ollama server is running and accessible (default: `http://ollama:11434`).
-2. Add your words to `words.txt`, one per line.
-3. Run the main script:
-	```bash
-	python main.py
-	```
-4. The output plot will be saved as `3d_plot_small.png`.
-
-## Configuration
-
-- Change the model or host by editing `MODEL` and `OLLAMA_HOST` in `main.py`.
-
-## File Structure
-
-- `main.py`: Main script for generating and plotting embeddings.
-- `src/llama.py`: Llama model interface.
-- `words.txt`: List of words to visualize.
-- `requirements.txt`: Python dependencies.
+scikit-learn
+numpy
+matplotlib
+```
+This will set up your environment for embedding text and visualizing vector images.
