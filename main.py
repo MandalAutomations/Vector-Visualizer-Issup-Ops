@@ -31,9 +31,9 @@ if __name__ == "__main__":
 
     embeddings = []
     for text in texts:  
-        text = text.replace("- ", "").strip()
         text = text.replace("-", "").strip()
-    
+        text = text.strip()
+
         print(text)
         embedding = llama.create_embedding(text)
         if embedding is not None:
